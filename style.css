@@ -69,7 +69,8 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   gap: 1rem;
 }
-.nav-logo { height: 170px; width: auto; flex-shrink: 0; }
+.nav-logo-link { flex-shrink: 0; line-height: 0; }
+.nav-logo { height: 170px; width: auto; display: block; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -136,7 +137,7 @@ a { color: inherit; text-decoration: none; }
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
   .site-nav { position: sticky; }
-  .nav-logo { height: 110px; }
+  .nav-logo { height: 110px; width: auto; }
   :root { --nav-h: 130px; }
 }
 
