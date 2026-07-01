@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /landing-page.html
+
+Sitemap: https://bigdogtree.com.au/sitemap.xml
