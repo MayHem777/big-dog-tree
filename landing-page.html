@@ -369,6 +369,7 @@
       text-transform: uppercase;
       letter-spacing: .05em;
     }
+    .req { color: var(--invalid); margin-left: .15em; }
     .form-row input,
     .form-row select,
     .form-row textarea {
@@ -594,22 +595,27 @@
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div class="form-row">
-          <label for="bd-name">Your Name</label>
+          <label for="bd-name">Your Name<span class="req">*</span></label>
           <input type="text" id="bd-name" name="name" placeholder="e.g. Steve Johnson" required autocomplete="name" />
           <span class="bd-field-error" id="bd-name-err">Please enter your name.</span>
         </div>
         <div class="form-row">
-          <label for="bd-phone">Phone Number</label>
+          <label for="bd-phone">Phone Number<span class="req">*</span></label>
           <input type="tel" id="bd-phone" name="phone" placeholder="e.g. 0412 345 678" required autocomplete="tel" />
-          <span class="bd-field-error" id="bd-phone-err">Please enter a valid phone number.</span>
+          <span class="bd-field-error" id="bd-phone-err">Please enter a valid Australian phone number.</span>
         </div>
         <div class="form-row">
-          <label for="bd-suburb">Suburb</label>
+          <label for="bd-email">Email Address<span class="req">*</span></label>
+          <input type="email" id="bd-email" name="email" placeholder="e.g. steve@email.com" required autocomplete="email" />
+          <span class="bd-field-error" id="bd-email-err">Please enter a valid email address.</span>
+        </div>
+        <div class="form-row">
+          <label for="bd-suburb">Suburb<span class="req">*</span></label>
           <input type="text" id="bd-suburb" name="suburb" placeholder="e.g. Noosaville, Tewantin, Cooroy…" required autocomplete="address-level2" />
           <span class="bd-field-error" id="bd-suburb-err">Please enter your suburb.</span>
         </div>
         <div class="form-row">
-          <label for="bd-service">What Do You Need Done?</label>
+          <label for="bd-service">What Do You Need Done?<span class="req">*</span></label>
           <select id="bd-service" name="service" required>
             <option value="" disabled selected>Select a service</option>
             <option value="Tree removal">Tree removal</option>
@@ -661,36 +667,53 @@
   var ENDPOINT = 'https://formsubmit.co/ajax/yourtreesdown@gmail.com';
 
   function validPhone(v) { return /^[\d\s\+\-\(\)]{8,15}$/.test(v.trim()); }
+  function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
 
   var form    = document.getElementById('bd-form');
   var success = document.getElementById('bd-form-success');
+
+  function check(el, errId, bad) {
+    var err = document.getElementById(errId);
+    if (bad) {
+      el.classList.add('bd-invalid');
+      if (err) err.classList.add('bd-visible');
+    } else {
+      el.classList.remove('bd-invalid');
+      if (err) err.classList.remove('bd-visible');
+    }
+    return !bad;
+  }
+
+  /* Live blur validation for phone and email */
+  var phone = form.querySelector('[name="phone"]');
+  var email = form.querySelector('[name="email"]');
+
+  phone.addEventListener('blur', function () {
+    if (phone.value.trim()) check(phone, 'bd-phone-err', !validPhone(phone.value));
+  });
+  phone.addEventListener('input', function () {
+    if (phone.classList.contains('bd-invalid')) check(phone, 'bd-phone-err', !validPhone(phone.value));
+  });
+  email.addEventListener('blur', function () {
+    if (email.value.trim()) check(email, 'bd-email-err', !validEmail(email.value));
+  });
+  email.addEventListener('input', function () {
+    if (email.classList.contains('bd-invalid')) check(email, 'bd-email-err', !validEmail(email.value));
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     var name    = form.querySelector('[name="name"]');
-    var phone   = form.querySelector('[name="phone"]');
     var suburb  = form.querySelector('[name="suburb"]');
     var service = form.querySelector('[name="service"]');
+
     var ok = true;
-
-    function check(el, errId, bad) {
-      var err = document.getElementById(errId);
-      if (bad) {
-        el.classList.add('bd-invalid');
-        if (err) err.classList.add('bd-visible');
-        ok = false;
-      } else {
-        el.classList.remove('bd-invalid');
-        if (err) err.classList.remove('bd-visible');
-      }
-    }
-
-    check(name,    'bd-name-err',    !name.value.trim());
-    check(phone,   'bd-phone-err',   !validPhone(phone.value));
-    check(suburb,  'bd-suburb-err',  !suburb.value.trim());
-    check(service, 'bd-service-err', !service.value);
-
+    if (!check(name,    'bd-name-err',    !name.value.trim()))    ok = false;
+    if (!check(phone,   'bd-phone-err',   !validPhone(phone.value))) ok = false;
+    if (!check(email,   'bd-email-err',   !validEmail(email.value))) ok = false;
+    if (!check(suburb,  'bd-suburb-err',  !suburb.value.trim()))  ok = false;
+    if (!check(service, 'bd-service-err', !service.value))        ok = false;
     if (!ok) return;
 
     var btn  = form.querySelector('button[type="submit"]');
@@ -702,6 +725,7 @@
     var data = new FormData();
     data.append('name',     name.value.trim());
     data.append('phone',    phone.value.trim());
+    data.append('email',    email.value.trim());
     data.append('suburb',   suburb.value.trim());
     data.append('service',  service.value);
     data.append('details',  details ? details.value.trim() : '');
