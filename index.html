@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Dog Tree &amp; Stump Removal — Noosa &amp; Sunshine Coast</title>
+  <meta name="description" content="Noosa's most experienced tree crew. Tree removal, stump grinding, land clearing &amp; demolition. 25+ years experience. Call for a free quote." />
+  <meta property="og:title" content="Big Dog Tree &amp; Stump Removal" />
+  <meta property="og:description" content="25+ years experience. Tree removal, stump grinding, land clearing across Noosa &amp; the Sunshine Coast." />
+  <meta property="og:image" content="og-image.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HOME HERO ── */
+    .hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px 24px 100px;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 767px) { .hero-inner { grid-template-columns: 1fr; gap: 40px; } }
+    .hero-eyebrow {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: .75rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      margin-bottom: 1.1rem;
+    }
+    .hero h1 em { font-style: normal; color: var(--cyan); }
+    .hero-sub { font-size: 1.1rem; color: #999; line-height: 1.7; margin-bottom: 2rem; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-photo {
+      background: #1a1a1a;
+      border: 2px dashed #333;
+      border-radius: 12px;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: .85rem;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+
+    /* ── STATS BAR ── */
+    .stats { background: var(--off-white); padding: 40px 24px; border-bottom: 1px solid var(--border); }
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+    @media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+    .stat-num { font-size: 2.2rem; font-weight: 900; color: var(--black); line-height: 1; }
+    .stat-label { font-size: .82rem; color: var(--muted); margin-top: .3rem; font-weight: 600; }
+
+    /* ── GALLERY PREVIEW ── */
+    .gallery-preview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 600px) { .gallery-preview { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+
+<a class="sticky-call" href="tel:0490658999">📞 Free Quote — 0490 658 999</a>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo.png" alt="Big Dog Tree &amp; Stump Removal" class="nav-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="tel:0490658999" class="btn btn-cyan">📞 0490 658 999</a></div>
+    <button class="nav-hamburger" aria-label="Menu" onclick="document.getElementById('mobile-nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobile-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:0490658999" class="btn btn-cyan">📞 Call 0490 658 999</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Noosa &amp; Sunshine Coast</p>
+      <h1>Tree Removal<br><em>Done Right.</em></h1>
+      <p class="hero-sub">From a single backyard tree to full land clearing — Big Dog has the gear and 25+ years of hands-on experience to handle any job, any size. We show up, we clean up, we're done.</p>
+      <div class="hero-ctas">
+        <a href="tel:0490658999" class="btn btn-cyan">📞 Call 0490 658 999</a>
+        <a href="contact.html" class="btn btn-outline-white">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <!-- PHOTO: Replace with <img src="your-photo.jpg" alt="Big Dog Tree Removal at work" /> -->
+      📷 Add hero photo here
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST BAR ══ -->
+<div class="trust">
+  <div class="trust-inner">
+    <span class="trust-item">✅ 25+ Years Experience</span>
+    <span class="trust-item">📍 Local — Noosa &amp; Sunshine Coast</span>
+    <span class="trust-item">🆓 Free Quotes</span>
+    <span class="trust-item">🛡️ Fully Insured</span>
+  </div>
+</div>
+
+<!-- ══ STATS ══ -->
+<div class="stats">
+  <div class="stats-inner">
+    <div><div class="stat-num">25+</div><div class="stat-label">Years Experience</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Free Quotes</div></div>
+    <div><div class="stat-num">Any</div><div class="stat-label">Size Job</div></div>
+    <div><div class="stat-num">Local</div><div class="stat-label">Noosa Based</div></div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section class="section" style="background:var(--off-white)">
+  <div class="section-inner">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Every Job, Done Right.</h2>
+    <p class="section-sub">Whatever's growing where it shouldn't be — we've got the equipment and experience to deal with it safely and efficiently.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌳</div>
+        <h3>Tree Removal</h3>
+        <p>Safe removal of any size tree including large, dangerous, or difficult-access trees. Fully insured, site left clean.</p>
+        <a href="services.html#tree-removal" class="card-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💨</div>
+        <h3>Stump Grinding</h3>
+        <p>Stubborn stumps gone for good. Ground down below surface — ready to turf, pave, or plant over straight away.</p>
+        <a href="services.html#stump-grinding" class="card-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌾</div>
+        <h3>Land Clearing</h3>
+        <p>Large-scale clearing for rural blocks, acreage, and development sites. Efficient and cost-effective.</p>
+        <a href="services.html#land-clearing" class="card-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌴</div>
+        <h3>Palm Tree Removal</h3>
+        <p>Palm removal is a specialty. Clean, efficient removal with no mess left behind — fronds, trunk, and all.</p>
+        <a href="services.html#palm-removal" class="card-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <h3>Fire Prevention</h3>
+        <p>Strategic clearing and vegetation management to reduce fire risk around your home or rural property.</p>
+        <a href="services.html#fire-prevention" class="card-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Demolition</h3>
+        <p>Small to medium demolition jobs handled alongside site clearing. One crew, one call, one clean site.</p>
+        <a href="services.html#demolition" class="card-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY PREVIEW ══ -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Our Work</p>
+    <h2 class="section-title">See What We've Tackled.</h2>
+    <p class="section-sub">25 years of jobs big and small across the Sunshine Coast. We don't leave until the site is clean.</p>
+    <div class="gallery-preview">
+      <!-- PHOTOS: Replace each div with <div class="gallery-photo"><img src="photo.jpg" alt="..." /></div> -->
+      <div class="gallery-photo">📷 Photo 1</div>
+      <div class="gallery-photo">📷 Photo 2</div>
+      <div class="gallery-photo">📷 Photo 3</div>
+    </div>
+    <div style="text-align:center">
+      <a href="gallery.html" class="btn btn-black">View Full Gallery →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ══ -->
+<section class="section section-dark">
+  <div class="section-inner">
+    <p class="section-label">Why Big Dog</p>
+    <h2 class="section-title">We Show Up. We Clean Up. We're Done.</h2>
+    <p class="section-sub">No subcontractors. No surprises. Just experienced locals who've been doing this for over 25 years.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>25+ Years Hands-On</h3>
+        <p>Not a franchise. Not a call centre. One experienced local crew who've handled every type of tree job across the Sunshine Coast.</p>
+      </div>
+      <div class="why-item">
+        <h3>Fully Insured</h3>
+        <p>Full public liability coverage on every job — backyard trees, large commercial clearing, and everything in between.</p>
+      </div>
+      <div class="why-item">
+        <h3>Free Quotes</h3>
+        <p>We come out, assess the job, and give you a straight price. No charge, no obligation, no pressure.</p>
+      </div>
+      <div class="why-item">
+        <h3>Site Left Clean</h3>
+        <p>We remove all debris, chip or haul away timber, and leave your property tidy. No mess for you to deal with after we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="section" style="background:var(--off-white)">
+  <div class="section-inner section-center">
+    <p class="section-label">Reviews</p>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-sub">Satisfied customers speak out.</p>
+    <div class="testi-grid">
+      <!-- TESTIMONIALS: Replace placeholder copy with real customer reviews -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Big Dog did an incredible job removing a massive gum tree in our backyard. Professional, fast, and left the site spotless. Highly recommend!"</blockquote>
+        <div class="testi-meta">
+          <div class="testi-avatar">JB</div>
+          <div>
+            <div class="testi-name">Jamie B.</div>
+            <div class="testi-source">Noosaville</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Called them for stump grinding after another company quoted us double. Turned up on time, done in an hour, fair price. Won't use anyone else."</blockquote>
+        <div class="testi-meta">
+          <div class="testi-avatar">SK</div>
+          <div>
+            <div class="testi-name">Sarah K.</div>
+            <div class="testi-source">Cooroy</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Had a dangerous tree leaning over the house. These guys had it down safely the same week. Couldn't believe how clean they left everything."</blockquote>
+        <div class="testi-meta">
+          <div class="testi-avatar">MC</div>
+          <div>
+            <div class="testi-name">Mark C.</div>
+            <div class="testi-source">Tewantin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<div class="cta-band">
+  <h2>Ready to Get That Tree Gone?</h2>
+  <p>Free quotes, no obligation. We cover all of Noosa and the Sunshine Coast.</p>
+  <div class="cta-band-btns">
+    <a href="tel:0490658999" class="btn btn-black">📞 Call 0490 658 999</a>
+    <a href="contact.html" class="btn btn-outline-white" style="border-color:var(--black-soft);color:var(--black);">Get a Free Quote Online</a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Big Dog Tree &amp; Stump Removal" />
+      <p>Noosa &amp; Sunshine Coast's trusted tree removal crew. Over 25 years of hands-on experience. Fully insured. Free quotes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#tree-removal">Tree Removal</a></li>
+        <li><a href="services.html#stump-grinding">Stump Grinding</a></li>
+        <li><a href="services.html#land-clearing">Land Clearing</a></li>
+        <li><a href="services.html#palm-removal">Palm Tree Removal</a></li>
+        <li><a href="services.html#fire-prevention">Fire Prevention</a></li>
+        <li><a href="services.html#demolition">Demolition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>
+        📞 <a href="tel:0490658999">0490 658 999</a><br><br>
+        ✉️ <a href="mailto:yourtreesdown@gmail.com">yourtreesdown@gmail.com</a><br><br>
+        📍 Noosaville QLD 4566<br><br>
+        🕐 Available 24 hours
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Big Dog Tree &amp; Stump Removal. All rights reserved.</span>
+    <a href="index.html" style="color:#444;">Back to top ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>

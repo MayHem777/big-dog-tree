@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Big Dog Tree &amp; Stump Removal</title>
+  <meta name="description" content="See our work — tree removal, stump grinding, land clearing and demolition jobs across Noosa and the Sunshine Coast." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-full {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 767px) { .gallery-full { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 400px)  { .gallery-full { grid-template-columns: 1fr; } }
+
+    .gallery-full .gallery-photo { aspect-ratio: 4/3; }
+
+    .gallery-category { margin-bottom: 3.5rem; }
+    .gallery-category h3 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--black);
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--cyan);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<a class="sticky-call" href="tel:0490658999">📞 Free Quote — 0490 658 999</a>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo.png" alt="Big Dog Tree &amp; Stump Removal" class="nav-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="tel:0490658999" class="btn btn-cyan">📞 0490 658 999</a></div>
+    <button class="nav-hamburger" aria-label="Menu" onclick="document.getElementById('mobile-nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:0490658999" class="btn btn-cyan">📞 Call 0490 658 999</a>
+  </div>
+</nav>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="page-hero">
+  <p class="page-hero-eyebrow">Our Work</p>
+  <h1>25 Years of Results.</h1>
+  <p>We don't leave until the job's done and the site is clean. Here's a look at what we've tackled across Noosa and the Sunshine Coast.</p>
+</div>
+
+<!-- ══ GALLERY ══ -->
+<section class="section">
+  <div class="section-inner">
+
+    <div class="gallery-category">
+      <h3>🌳 Tree Removal</h3>
+      <div class="gallery-full">
+        <!-- PHOTOS: Replace each .gallery-photo div with <div class="gallery-photo"><img src="filename.jpg" alt="description" /></div> -->
+        <div class="gallery-photo">📷 Tree removal 1</div>
+        <div class="gallery-photo">📷 Tree removal 2</div>
+        <div class="gallery-photo">📷 Tree removal 3</div>
+        <div class="gallery-photo">📷 Tree removal 4</div>
+        <div class="gallery-photo">📷 Tree removal 5</div>
+        <div class="gallery-photo">📷 Tree removal 6</div>
+      </div>
+    </div>
+
+    <div class="gallery-category">
+      <h3>💨 Stump Grinding</h3>
+      <div class="gallery-full">
+        <div class="gallery-photo">📷 Stump grinding 1</div>
+        <div class="gallery-photo">📷 Stump grinding 2</div>
+        <div class="gallery-photo">📷 Stump grinding 3</div>
+      </div>
+    </div>
+
+    <div class="gallery-category">
+      <h3>🌴 Palm Tree Removal</h3>
+      <div class="gallery-full">
+        <div class="gallery-photo">📷 Palm removal 1</div>
+        <div class="gallery-photo">📷 Palm removal 2</div>
+        <div class="gallery-photo">📷 Palm removal 3</div>
+      </div>
+    </div>
+
+    <div class="gallery-category">
+      <h3>🌾 Land Clearing</h3>
+      <div class="gallery-full">
+        <div class="gallery-photo">📷 Land clearing 1</div>
+        <div class="gallery-photo">📷 Land clearing 2</div>
+        <div class="gallery-photo">📷 Land clearing 3</div>
+      </div>
+    </div>
+
+    <div class="gallery-category">
+      <h3>🏗️ Demolition</h3>
+      <div class="gallery-full">
+        <div class="gallery-photo">📷 Demolition 1</div>
+        <div class="gallery-photo">📷 Demolition 2</div>
+        <div class="gallery-photo">📷 Demolition 3</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<div class="cta-band">
+  <h2>Like What You See?</h2>
+  <p>Get in touch for a free quote. We cover all of Noosa and the Sunshine Coast.</p>
+  <div class="cta-band-btns">
+    <a href="tel:0490658999" class="btn btn-black">📞 Call 0490 658 999</a>
+    <a href="contact.html" class="btn btn-outline-white" style="border-color:var(--black-soft);color:var(--black);">Get a Free Quote</a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Big Dog Tree &amp; Stump Removal" />
+      <p>Noosa &amp; Sunshine Coast's trusted tree removal crew. Over 25 years of hands-on experience. Fully insured. Free quotes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#tree-removal">Tree Removal</a></li>
+        <li><a href="services.html#stump-grinding">Stump Grinding</a></li>
+        <li><a href="services.html#land-clearing">Land Clearing</a></li>
+        <li><a href="services.html#palm-removal">Palm Tree Removal</a></li>
+        <li><a href="services.html#fire-prevention">Fire Prevention</a></li>
+        <li><a href="services.html#demolition">Demolition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>
+        📞 <a href="tel:0490658999">0490 658 999</a><br><br>
+        ✉️ <a href="mailto:yourtreesdown@gmail.com">yourtreesdown@gmail.com</a><br><br>
+        📍 Noosaville QLD 4566<br><br>
+        🕐 Available 24 hours
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Big Dog Tree &amp; Stump Removal. All rights reserved.</span>
+    <a href="#" style="color:#444;">Back to top ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>
