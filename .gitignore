@@ -1,0 +1,14 @@
+# Original/raw media — never commit these
+_originals/
+
+# Large video files anywhere in the repo
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
