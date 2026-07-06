@@ -51,6 +51,7 @@
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "23 Venture Dr",
       "addressLocality": "Noosaville",
       "addressRegion": "QLD",
       "postalCode": "4566",
@@ -320,7 +321,7 @@
   <div class="section-inner section-center">
     <p class="section-label">Reviews</p>
     <h2 class="section-title">What Our Customers Say</h2>
-    <p class="section-sub">Real reviews from Big Dog customers on Google.</p>
+    <p class="section-sub">Rated <strong>5.0 ★</strong> from 13 reviews on Google.</p>
 
     <div class="testi-rotator" id="testi-rotator" aria-live="polite">
       <div class="testi-card testi-slide" id="testi-slide">
@@ -345,7 +346,7 @@
   .testi-rotator { max-width: 640px; margin: 0 auto; }
   .testi-slide { transition: opacity .45s ease; opacity: 1; }
   .testi-slide.fading { opacity: 0; }
-  .testi-slide blockquote { min-height: 5.5rem; }
+  .testi-slide blockquote { min-height: 8rem; display: flex; align-items: center; justify-content: center; }
   .testi-dots { display: flex; gap: .5rem; justify-content: center; margin-top: 1.25rem; }
   .testi-dots button {
     width: 10px; height: 10px; border-radius: 50%;
@@ -360,12 +361,23 @@
   'use strict';
 
   /* ══ GOOGLE REVIEWS ══
-     Source: Big Dog's Google Business Profile.
-     To update: add/edit entries below — name, suburb optional in text, stars 1-5, quote verbatim. */
+     Real reviews from Big Dog's Google Business Profile (5.0 ★, 13 reviews).
+     Text is verbatim; two longer reviews trimmed to complete sentences where
+     Google truncated them. To update: add/edit entries below. */
   var REVIEWS = [
-    { name: 'Jamie B.',  stars: 5, text: 'Big Dog did an incredible job removing a massive gum tree in our backyard. Professional, fast, and left the site spotless. Highly recommend!' },
-    { name: 'Sarah K.',  stars: 5, text: 'Called them for stump grinding after another company quoted us double. Turned up on time, done in an hour, fair price. Won\'t use anyone else.' },
-    { name: 'Mark C.',   stars: 5, text: 'Had a dangerous tree leaning over the house. These guys had it down safely the same week. Couldn\'t believe how clean they left everything.' }
+    { name: 'Mary-Jane Hopson-Tom', stars: 5, text: 'Absolutely phenomenal job by this crew, very knowledgeable, professional. Our job was a bit difficult and to be honest annoying working around glass and close to the house but the team did a PERFECT job, not one close call. Highly, HIGHLY recommend.' },
+    { name: 'Samantha Blomberg', stars: 5, text: 'Thanks so much for your great work Phil. It was so nice to meet you and you made us feel nice and relaxed about the job. Highly recommended to anyone.' },
+    { name: 'David S', stars: 5, text: 'Phil cut down some trees for me on short notice. Very professional and competitive rates. Highly recommend' },
+    { name: 'James Price', stars: 5, text: 'Phil and Dave were absolute superstars. Their communication was faultless. They coordinated our demolition from start to finish (asbestos removal, recycling, tree removal and site clean up), on time and on budget.' },
+    { name: 'Shane Wahl', stars: 5, text: 'Phil & his team have been my go-to arborists for 3 years now. Always great work, good communication and a fair price. I wouldn\'t look any further for any tree and stump work. A+' },
+    { name: 'Sara Hollonds', stars: 5, text: 'Highly recommend Phill for large tree removal in built up area. Work was carried out professionally, with incredible accuracy and clean up was excellent.' },
+    { name: 'M C', stars: 5, text: 'Phil assisted us with removal of an extremely large dead gum tree prior to cyclone Alfred from our property in Doonan.' },
+    { name: 'Kieran Mathieson', stars: 5, text: 'Would highly recommend Phil and his team for any tree, stump and demolition works. Absolutely smashed it!' },
+    { name: 'Lance Webster', stars: 5, text: 'Phil & his team have done many jobs for us they do a great job I would definitely recommend these guys' },
+    { name: 'Phillip Evans', stars: 5, text: 'Thanks Phill and team. Great to have safe, accurate and tidy operators on the job.' },
+    { name: 'Helen Hansard', stars: 5, text: 'Quick efficient no fuss tree guys. Very happy with there work and price' },
+    { name: 'Benjamin Kearney', stars: 5, text: 'Phil’s a great operator, super helpful and professional.' },
+    { name: 'Jay Underwood', stars: 5, text: 'Awesome service, on quote, very efficient at a fair price' }
   ];
 
   var i = 0, timer = null;
