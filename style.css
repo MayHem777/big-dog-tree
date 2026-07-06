@@ -14,7 +14,7 @@
   --border:     #ddd;
   --invalid:    #c0392b;
   --radius:     6px;
-  --nav-h:      198px;
+  --nav-h:      112px;
 }
 
 html { scroll-behavior: smooth; }
@@ -70,7 +70,7 @@ a { color: inherit; text-decoration: none; }
   gap: 1rem;
 }
 .nav-logo-link { flex-shrink: 0; line-height: 0; }
-.nav-logo { height: 170px; width: auto; display: block; }
+.nav-logo { height: 84px; width: auto; display: block; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -137,8 +137,8 @@ a { color: inherit; text-decoration: none; }
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
   .site-nav { position: sticky; }
-  .nav-logo { height: 110px; width: auto; }
-  :root { --nav-h: 130px; }
+  .nav-logo { height: 64px; width: auto; }
+  :root { --nav-h: 92px; }
 }
 
 /* ── STICKY MOBILE CALL ── */
@@ -471,7 +471,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid #222;
 }
 @media (max-width: 767px) { .footer-inner { grid-template-columns: 1fr; gap: 2rem; } }
-.footer-brand img { height: 170px; width: auto; margin-bottom: 1rem; }
+.footer-brand img { height: 140px; width: auto; margin-bottom: 1rem; }
 .footer-brand p { font-size: .88rem; color: #666; line-height: 1.65; max-width: 280px; }
 .footer-socials { display: flex; gap: 1.5rem; margin-top: 1.5rem; }
 .footer-socials a { display: flex; flex-direction: column; align-items: center; gap: .4rem; text-decoration: none; }
